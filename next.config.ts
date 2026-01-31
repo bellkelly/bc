@@ -2,6 +2,8 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   /* config options here */
+  output: 'export', // Enables static HTML export
+
   async headers() {
     return [
       {
