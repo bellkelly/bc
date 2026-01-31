@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  reactStrictMode: true,
-  basePath: '/cl', // Add a leading slash
-  assetPrefix: '/cl',
   async headers() {
     return [
       {
