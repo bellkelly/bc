@@ -28,7 +28,7 @@ const LINKEDIN = process.env.NEXT_PUBLIC_LINKEDIN
 const services = {
   core: [
     {
-      text: 'Public policy, organizational policy, legislation, research analysis',
+      text: 'Public policy, organizational policy, legislation, and research analysis',
       icon: <GavelOutlinedIcon />,
     },
     {
