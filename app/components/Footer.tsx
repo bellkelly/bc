@@ -1,6 +1,8 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import React from 'react'
+import Link from 'next/link'
 
 import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
@@ -11,9 +13,18 @@ import Typography from '@mui/material/Typography'
 
 const Footer = () => {
   const theme = useTheme()
+  const pathname = usePathname()
+  const isHome = pathname === '/'
 
   return (
-    <Box component="footer" sx={{ py: 8 }}>
+    <Box
+      component="footer"
+      sx={{
+        py: 8,
+        flex: 1,
+        bgcolor: isHome ? theme.palette.background.default : theme.palette.tertiary.dark,
+      }}
+    >
       <Container id="footer" maxWidth="md">
         <Stack>
           <Box component="img" src="/logo.png" alt="" width={220} sx={{ mx: 'auto', mt: -6 }} />
@@ -25,16 +36,16 @@ const Footer = () => {
             sx={{ my: 3 }}
           >
             <MuiLink
+              component={Link}
               href="/privacy"
-              color="textSecondary"
-              sx={{ '&:hover': { color: theme.palette.primary.main } }}
+              sx={{ color: 'textSecondary', '&:hover': { color: theme.palette.primary.main } }}
             >
               Privacy Policy
             </MuiLink>
             <MuiLink
+              component={Link}
               href="/accessibility"
-              color="textSecondary"
-              sx={{ '&:hover': { color: theme.palette.primary.main } }}
+              sx={{ color: 'textSecondary', '&:hover': { color: theme.palette.primary.main } }}
             >
               Accessibility Statement
             </MuiLink>

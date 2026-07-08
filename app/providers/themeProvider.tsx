@@ -46,7 +46,7 @@ const theme = createTheme({
       contrastText: getContrastRatio(LAVENDER_GRAY, WHITE) > 4.5 ? 'WHITE' : 'BLACK',
     },
     customGradient: {
-      main: 'linear-gradient(to bottom right, var(--mui-palette-primary-light), var(--mui-palette-primary-dark))',
+      main: 'linear-gradient(160deg, var(--mui-palette-primary-light) 0%, var(--mui-palette-primary-dark))',
     },
     common: {
       // Usage: Main text, headings, and logo lettering (standard version).
@@ -63,7 +63,7 @@ const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 18,
+    borderRadius: 24,
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica Neue", "Arial", sans-serif',
@@ -87,6 +87,15 @@ const theme = createTheme({
     body2: {
       color: GRAY,
     },
+    overline: {
+      textTransform: 'uppercase',
+      fontWeight: 700,
+      letterSpacing: 1.25,
+    },
+    button: {
+      letterSpacing: 1.25,
+      fontWeight: 700,
+    },
   },
   components: {
     MuiButton: {
@@ -94,6 +103,25 @@ const theme = createTheme({
         size: 'large',
       },
     },
+    // MuiList: { styleOverrides: { root: { listStyleType: 'none', padding: 0, margin: 0 } } },
+    // MuiListItem: {
+    //   styleOverrides: {
+    //     root: {
+    //       display: 'flex',
+    //       alignItems: 'center',
+    //       paddingLeft: 0,
+    //       paddingRight: 0,
+    //       '&::before': {
+    //         content: '"•"',
+    //         color: PURPLE,
+    //         display: 'inline-block',
+    //         marginRight: '8px',
+    //         fontSize: '1.2em',
+    //         lineHeight: 1,
+    //       },
+    //     },
+    //   },
+    // },
   },
 })
 

@@ -1,20 +1,30 @@
 'use client'
 
-import { ReactElement } from 'react'
-
-import Avatar from '@mui/material/Avatar'
-import Stack from '@mui/material/Stack'
+import Box from '@mui/material/Box'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 
-const ServiceItem = ({ icon, text }: { icon: ReactElement; text: string }) => (
-  <Stack direction="row" spacing={2} sx={{ p: 2 }}>
-    <Avatar sx={{ bgcolor: 'primary.main', color: 'tertiary.light', width: 56, height: 56 }}>
-      {icon}
-    </Avatar>
-    <Typography variant="h6" component="p">
-      {text}
-    </Typography>
-  </Stack>
+export interface Service {
+  index: number
+  title: string
+  content: string
+}
+
+const ServiceItem = ({ index, title, content }: Service) => (
+  <Card elevation={1}>
+    <CardContent sx={{ display: 'flex', flexDirection: 'row', gap: 3, p: 3 }}>
+      <Typography color="primary" variant="h4" component="span">
+        {index}
+      </Typography>
+      <Box>
+        <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 600 }}>
+          {title}
+        </Typography>
+        <Typography color="textSecondary">{content}</Typography>
+      </Box>
+    </CardContent>
+  </Card>
 )
 
 export default ServiceItem
