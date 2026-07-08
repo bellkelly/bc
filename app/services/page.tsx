@@ -16,17 +16,17 @@ import ServiceItem from '@/app/components/ServiceItem'
 
 const services = [
   {
-    title: 'Organizational Planning',
+    title: 'Planning',
     content:
       'I work with organizations to design and build strategic plans, operational plans, and initiative-specific plans — either through directly leading these activities or guiding them.',
   },
   {
-    title: 'Organizational Analysis',
+    title: 'Analysis',
     content:
       "I support teams in conducting analysis and facilitating decision-making processes to determine if and how to address emergent business opportunities and risks, within the context of the organization's strategic plan.",
   },
   {
-    title: 'Public Policy Advising',
+    title: 'Public Policy',
     content:
       'As a career-long policy professional, I advise organizations on how to approach public policy issues and establish thoughtful positions and advocacy strategies in relation to those issues.',
   },
