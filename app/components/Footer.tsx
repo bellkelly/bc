@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography'
 const Footer = () => {
   const theme = useTheme()
   const pathname = usePathname()
-  const isHome = pathname === '/'
+  const isWhite = pathname === '/' || pathname === '/services'
 
   return (
     <Box
@@ -22,7 +22,7 @@ const Footer = () => {
       sx={{
         py: 8,
         flex: 1,
-        bgcolor: isHome ? theme.palette.background.default : theme.palette.tertiary.dark,
+        bgcolor: isWhite ? theme.palette.background.default : theme.palette.tertiary.dark,
       }}
     >
       <Container id="footer" maxWidth="md">
