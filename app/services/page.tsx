@@ -7,26 +7,66 @@ import { map } from 'lodash'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
+import ListItem from '@mui/material/ListItem'
 import { useTheme } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
 
 import Gradient from '@/app/components/Gradient'
 import ServiceItem from '@/app/components/ServiceItem'
 
 const services = [
   {
+    title: 'Policy and Governance Sprints',
+    content: (
+      <>
+        {
+          'I provide rapid-turnaround support to help lean leadership teams address policy and governance needs, including:\n'
+        }
+        <Box
+          component="ol"
+          sx={{
+            listStyle: 'none',
+            counterReset: 'item',
+            marginLeft: '-16px',
+            marginTop: '8px',
+            '& li': {
+              counterIncrement: 'item',
+              display: 'list-item',
+              '&::before': {
+                content: '"(" counter(item, lower-latin) ") "',
+              },
+            },
+          }}
+        >
+          <ListItem>
+            Governance Modernization: Developing board manuals, committee terms of reference,
+            governance policies, and bylaws.
+          </ListItem>
+          <ListItem>
+            Policy and Advocacy Submissions: Drafting clear, evidence-based policy position papers,
+            briefs, and government submissions.
+          </ListItem>
+          <ListItem>
+            Operational Policies: Designing clear, modern, and compliant administrative policies and
+            procedures.
+          </ListItem>
+        </Box>
+      </>
+    ),
+  },
+  {
+    title: 'Analysis',
+    content:
+      "I support teams in conducting analysis — including collecting and synthesising sector data, emerging trends, and stakeholder input — to determine if and how to address emergent business opportunities and risks, within the context of the organization's strategic plan.",
+  },
+  {
     title: 'Planning',
     content:
       'I work with organizations to design and build strategic plans, operational plans, and initiative-specific plans — either through directly leading these activities or guiding them.',
   },
   {
-    title: 'Analysis',
-    content:
-      "I support teams in conducting analysis and facilitating decision-making processes to determine if and how to address emergent business opportunities and risks, within the context of the organization's strategic plan.",
-  },
-  {
-    title: 'Public Policy',
+    title: 'Public Policy Advising',
     content:
       'As a career-long policy professional, I advise organizations on how to approach public policy issues and establish thoughtful positions and advocacy strategies in relation to those issues.',
   },

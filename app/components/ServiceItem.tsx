@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography'
 export interface Service {
   index: number
   title: string
-  content: string
+  content: any
 }
 
 const ServiceItem = ({ index, title, content }: Service) => (
